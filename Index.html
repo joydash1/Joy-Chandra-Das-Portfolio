@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joy Chandra Das — Software Engineer</title>
+  <link rel="stylesheet" href="assets/css/portfolio.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <!-- Font Awesome 6.7.2 -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Space Grotesk', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            dark: {
+              950: '#030712',
+              900: '#0a0f1a',
+              800: '#0d1424',
+              700: '#111827',
+              600: '#1a2234',
+            },
+            emerald: {
+              400: '#34d399',
+              500: '#10b981',
+              600: '#059669',
+            },
+            cyan: {
+              400: '#22d3ee',
+              500: '#06b6d4',
+            },
+            glass: 'rgba(255,255,255,0.03)',
+          },
+          backgroundImage: {
+            'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+            'hero-glow': 'radial-gradient(ellipse 60% 50% at 70% 40%, rgba(16,185,129,0.12) 0%, transparent 65%)',
+            'grid-pattern': 'linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px)',
+          },
+          animation: {
+            'pulse-slow': 'pulse 3s ease-in-out infinite',
+            'float': 'float 5s ease-in-out infinite',
+            'float-delay': 'float 5s ease-in-out 2s infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-10px)' },
+            }
+          },
+          boxShadow: {
+            'glow': '0 0 40px rgba(16,185,129,0.15)',
+            'glow-sm': '0 0 20px rgba(16,185,129,0.1)',
+            'card': '0 1px 1px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.04)',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="relative overflow-x-hidden">
+<!-- PREMIUM NAVBAR -->
+<nav class="fixed top-4 left-0 right-0 z-50 px-4">
+    <div class="max-w-7xl mx-auto">
+
+        <div class="glass rounded-2xl border border-white/10 backdrop-blur-xl
+                    px-6 py-4 flex items-center justify-between">
+
+            <!-- Logo -->
+            <a href="#about"
+               class="font-display text-xl font-bold tracking-tight">
+
+                <span class="grad-text">&lt;Joy</span>
+                <span class="text-white">Chandra</span>
+                <span class="grad-text">Das/&gt;</span>
+
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden lg:flex items-center gap-8">
+
+                <a href="#about"
+                   class="text-sm text-slate-400 hover:text-emerald-400 transition-all">
+                    About
+                </a>
+
+                <a href="#skills"
+                   class="text-sm text-slate-400 hover:text-emerald-400 transition-all">
+                    Skills
+                </a>
+
+                <a href="#experience"
+                   class="text-sm text-slate-400 hover:text-emerald-400 transition-all">
+                    Experience
+                </a>
+
+                <a href="#projects"
+                   class="text-sm text-slate-400 hover:text-emerald-400 transition-all">
+                    Projects
+                </a>
+
+                <a href="#contact"
+                   class="text-sm text-slate-400 hover:text-emerald-400 transition-all">
+                    Contact
+                </a>
+
+            </div>
+
+            <!-- Right Side -->
+            <div class="flex items-center gap-3">
+
+                <!-- Resume -->
+                <a href="assets/documents/joyChandraDasResume.pdf"
+                   download
+                   class="hidden md:flex items-center gap-2 px-4 py-2
+                          text-sm text-slate-300 glass rounded-xl
+                          hover:text-emerald-400 transition-all">
+
+                    <i class="fa-regular fa-file-pdf"></i> Resume
+
+                </a>
+
+                <!-- Hire Me -->
+                <a href="#contact"
+                   class="inline-flex items-center gap-2
+                          px-5 py-2.5 rounded-xl
+                          text-sm font-semibold text-dark-950
+                          transition-all hover:scale-105 hover:shadow-glow"
+                   style="background:linear-gradient(135deg,#10b981,#22d3ee);">
+
+                    Hire Me →
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+</nav>
+
+  <!-- HERO -->
+  <section id="about" class="relative min-h-screen flex items-center pt-20 pb-16 px-6 overflow-hidden">
+    <!-- Background glow -->
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute top-1/4 right-1/4 w-96 h-96 rounded-full opacity-20" style="background: radial-gradient(circle, rgba(16,185,129,0.3) 0%, transparent 70%); filter: blur(60px);"></div>
+      <div class="absolute bottom-1/3 left-1/4 w-64 h-64 rounded-full opacity-10" style="background: radial-gradient(circle, rgba(34,211,238,0.4) 0%, transparent 70%); filter: blur(40px);"></div>
+    </div>
+ 
+    <div class="relative z-10 max-w-6xl mt-5 mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+ 
+      <!-- LEFT -->
+      <div class="reveal">
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2.5 mb-8 px-4 py-2 rounded-full glass text-sm text-slate-300">
+          <span class="badge-dot w-2 h-2 rounded-full bg-emerald-400 flex-shrink-0"></span>
+          Available for opportunities
+        </div>
+ 
+        <!-- Title -->
+        <h1 class="font-display text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight mb-6">
+          Hi, I'm<br/>
+          <span class="grad-text">Joy Chandra Das</span>
+        </h1>
+ 
+        <p class="text-slate-400 text-base leading-relaxed mb-10 max-w-md">
+          Software Engineer with <span class="text-emerald-400 font-semibold">3+ years</span> of experience building scalable backend systems and APIs with <span class="text-white font-medium">C#</span>, <span class="text-white font-medium">.NET Core</span>, <span class="text-white font-medium">MSSQL</span>, and <span class="text-white font-medium">PostgreSQL</span>.
+        </p>
+ 
+        <!-- CTA -->
+        <div class="flex flex-wrap gap-4 mb-12">
+          <a href="#projects" class="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-sm text-dark-950 transition-all hover:scale-105 hover:shadow-glow" style="background: linear-gradient(135deg, #10b981, #22d3ee);">
+            View Portfolio →
+          </a>
+          <a href="#contact" class="inline-flex items-center gap-2 px-6 py-3 rounded-full font-medium text-sm text-slate-300 glass hover:border-emerald-500/40 hover:text-emerald-400 transition-all">
+            Let's Talk
+          </a>
+        </div>
+ 
+        <!-- Stats -->
+        <div class="flex gap-10 pt-8 border-t border-white/5">
+          <div>
+            <div class="font-display text-3xl font-bold text-white">3+</div>
+            <div class="text-xs text-slate-500 mt-1 uppercase tracking-wider">Years Exp.</div>
+          </div>
+          <div>
+            <div class="font-display text-3xl font-bold text-white">20+</div>
+            <div class="text-xs text-slate-500 mt-1 uppercase tracking-wider">Projects</div>
+          </div>
+          <div>
+            <div class="font-display text-3xl font-bold text-white">15+</div>
+            <div class="text-xs text-slate-500 mt-1 uppercase tracking-wider">Happy Clients</div>
+          </div>
+        </div>
+      </div>
+ 
+      <!-- RIGHT — Photo -->
+      <div class="reveal flex justify-center lg:justify-end" style="transition-delay: 0.15s;">
+        <div class="relative">
+          <!-- Spinning ring -->
+          <div class="absolute inset-0 rounded-full photo-ring" style="padding: 3px; border-radius: 50%;">
+            <div class="w-full h-full rounded-full" style="background: #030712;"></div>
+          </div>
+ 
+          <!-- Photo container -->
+          <div class="relative w-72 h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden" style="padding: 5px; background: conic-gradient(from 135deg, #10b981, #22d3ee, #10b981);">
+            <div class="w-full h-full rounded-full overflow-hidden bg-dark-800 flex items-center justify-center">
+              <img src="assets/images/joy.jpeg" alt="Joy Chandra Das" class="w-full h-full object-cover object-center rounded-full" loading="lazy" />
+            </div>
+          </div>
+ 
+          <!-- Badge: Expertise -->
+          <div class="float-1 absolute -right-6 top-8 glass rounded-2xl px-4 py-3 shadow-glow-sm min-w-[130px]">
+            <div class="text-[9px] font-semibold uppercase tracking-widest text-emerald-400 mb-1">Expertise</div>
+            <div class="text-sm font-semibold text-white">.NET Core / C#</div>
+          </div>
+ 
+          <!-- Badge: Status -->
+          <div class="float-2 absolute -left-6 bottom-8 glass rounded-2xl px-4 py-3 shadow-glow-sm">
+            <div class="text-[9px] font-semibold uppercase tracking-widest text-emerald-400 mb-1">Status</div>
+            <div class="flex items-center gap-2 text-sm font-semibold text-white">
+              <span class="badge-dot w-2 h-2 rounded-full bg-emerald-400 flex-shrink-0"></span>
+              Open to Work
+            </div>
+          </div>
+ 
+          <!-- Decorative stars -->
+          <div class="float-1 absolute -top-4 left-4 text-2xl text-emerald-400/40 pointer-events-none">✦</div>
+          <div class="float-2 absolute -bottom-2 right-0 text-base text-cyan-400/30 pointer-events-none">✦</div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- SKILLS -->
+  <section id="skills" class="relative py-24 px-6" style="background: rgba(13,20,36,0.8);">
+    <div class="max-w-6xl mx-auto">
+      <div class="reveal">
+        <div class="text-xs font-semibold uppercase tracking-[3px] text-emerald-400 mb-3">What I do</div>
+        <h2 class="font-display text-4xl font-bold tracking-tight mb-4">My <span class="grad-text">Specialities</span></h2>
+        <p class="text-slate-400 text-[15px] max-w-lg mb-14">Building business-driven web applications, scalable APIs, and database solutions using Microsoft technologies.</p>
+      </div>
+ 
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+ 
+        <div class="reveal glass glass-hover rounded-2xl p-7 cursor-default">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl mb-5" style="background: rgba(16,185,129,0.12);">⚙️</div>
+          <h3 class="font-display font-semibold text-base mb-2">C# & .NET Development</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">Developing enterprise applications using ASP.NET Core, MVC, Web API, Minimal API, and Blazor with clean and maintainable code practices.</p>
+        </div>
+ 
+        <div class="reveal glass glass-hover rounded-2xl p-7 cursor-default" style="transition-delay:0.05s">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl mb-5" style="background: rgba(16,185,129,0.12);">🗄️</div>
+          <h3 class="font-display font-semibold text-base mb-2">Database Design & SQL</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">Designing database schemas, writing complex SQL queries, stored procedures, performance tuning, and optimizing database operations.</p>
+        </div>
+ 
+        <div class="reveal glass glass-hover rounded-2xl p-7 cursor-default" style="transition-delay:0.1s">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl mb-5" style="background: rgba(16,185,129,0.12);">🔗</div>
+          <h3 class="font-display font-semibold text-base mb-2">RESTful API Development</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">Building secure and scalable REST APIs with authentication, authorization, API documentation, and third-party integrations.</p>
+        </div>
+ 
+        <div class="reveal glass glass-hover rounded-2xl p-7 cursor-default" style="transition-delay:0.15s">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl mb-5" style="background: rgba(16,185,129,0.12);">🌐</div>
+          <h3 class="font-display font-semibold text-base mb-2">Frontend Development</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">Creating responsive user interfaces using Angular, JavaScript, jQuery, HTML5, CSS3, and Bootstrap.</p>
+        </div>
+ 
+        <div class="reveal glass glass-hover rounded-2xl p-7 cursor-default" style="transition-delay:0.2s">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl mb-5" style="background: rgba(16,185,129,0.12);">📊</div>
+          <h3 class="font-display font-semibold text-base mb-2">Reporting & Business Solutions</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">Developing business reports, dashboards, and data-driven solutions using Crystal Reports and SQL-based reporting systems.</p>
+        </div>
+ 
+        <div class="reveal glass glass-hover rounded-2xl p-7 cursor-default" style="transition-delay:0.25s">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl mb-5" style="background: rgba(16,185,129,0.12);">🚀</div>
+          <h3 class="font-display font-semibold text-base mb-2">Deployment & Support</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">Managing application deployment, release activities, production support, troubleshooting, and performance improvements.</p>
+        </div>
+ 
+      </div>
+    </div>
+  </section>
+ <!-- EXPERIENCES -->
+ <section id="experience" class="py-28 px-6 lg:px-10 relative">
+
+    <div class="max-w-7xl mx-auto">
+
+        <!-- Header -->
+        <div class="text-center mb-20">
+            <div class="text-xs font-semibold uppercase tracking-[4px] text-emerald-400 mb-3">
+                Work History
+            </div>
+
+            <h2 class="font-display text-4xl lg:text-5xl font-bold mb-5">
+                Professional <span class="grad-text">Journey</span>
+            </h2>
+
+            <p class="text-slate-400 max-w-2xl mx-auto">
+                Building enterprise applications, fintech solutions and scalable
+                backend systems with Microsoft technologies.
+            </p>
+        </div>
+
+        <!-- Timeline -->
+        <div class="relative max-w-5xl mx-auto">
+
+            <!-- Center Line -->
+            <div class="absolute left-6 top-0 bottom-0 w-[2px]
+                        bg-gradient-to-b
+                        from-emerald-500
+                        via-cyan-500
+                        to-transparent">
+            </div>
+
+            <!-- Experience Card -->
+            <div class="relative pl-20 pb-12">
+
+                <!-- Dot -->
+                <div class="absolute left-0 top-8">
+
+                    <div class="relative flex items-center justify-center w-12 h-12">
+
+                        <div class="absolute inset-0 rounded-full bg-emerald-500/20 animate-ping"></div>
+
+                        <div class="w-6 h-6 rounded-full
+                                    bg-emerald-400
+                                    border-4 border-slate-950
+                                    shadow-[0_0_25px_rgba(16,185,129,0.8)]">
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Card -->
+                <div class="glass rounded-3xl p-8 lg:p-10
+                            border border-white/10
+                            hover:border-emerald-500/30
+                            hover:-translate-y-2
+                            transition-all duration-300">
+
+                    <div class="flex flex-wrap items-center gap-3 mb-4">
+
+                        <span class="px-3 py-1 rounded-full
+                                    bg-emerald-500/10
+                                    text-emerald-400
+                                    text-xs font-semibold">
+
+                            Jul 2023 - Present
+
+                        </span>
+
+                        <span class="text-slate-500 text-sm">
+                            United Corporate Advisory Service Ltd.
+                        </span>
+
+                    </div>
+
+                    <h3 class="text-2xl font-bold text-white mb-2">
+                        Software Engineer
+                    </h3>
+
+                    <p class="text-slate-400 leading-relaxed mb-6">
+                        Developing scalable enterprise and fintech applications
+                        using .NET Core, MSSQL, PostgreSQL and modern frontend technologies.
+                    </p>
+
+                    <!-- Achievement -->
+                    <div class="grid md:grid-cols-2 gap-4 mb-6">
+
+                        <div class="rounded-2xl bg-white/5 p-4">
+                            <div class="text-2xl font-bold text-emerald-400">
+                                30%
+                            </div>
+                            <div class="text-sm text-slate-400">
+                                Query Performance Improvement
+                            </div>
+                        </div>
+
+                        <div class="rounded-2xl bg-white/5 p-4">
+                            <div class="text-2xl font-bold text-cyan-400">
+                                20+
+                            </div>
+                            <div class="text-sm text-slate-400">
+                                Enterprise Projects Delivered
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Tech -->
+                    <div class="flex flex-wrap gap-2">
+
+                        <span class="tag-chip">.NET Core</span>
+                        <span class="tag-chip">C#</span>
+                        <span class="tag-chip">MSSQL</span>
+                        <span class="tag-chip">PostgreSQL</span>
+                        <span class="tag-chip">Angular</span>
+                        <span class="tag-chip">REST API</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Experience Card 2 -->
+            <div class="relative pl-20">
+
+                <!-- Dot -->
+                <div class="absolute left-0 top-8">
+
+                    <div class="relative flex items-center justify-center w-12 h-12">
+
+                        <div class="w-6 h-6 rounded-full
+                                    bg-cyan-400
+                                    border-4 border-slate-950
+                                    shadow-[0_0_25px_rgba(34,211,238,0.8)]">
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Card -->
+                <div class="glass rounded-3xl p-8 lg:p-10
+                            border border-white/10
+                            hover:border-cyan-500/30
+                            hover:-translate-y-2
+                            transition-all duration-300">
+
+                    <div class="flex flex-wrap items-center gap-3 mb-4">
+
+                        <span class="px-3 py-1 rounded-full
+                                    bg-cyan-500/10
+                                    text-cyan-400
+                                    text-xs font-semibold">
+
+                            Oct 2022 - Jun 2023
+
+                        </span>
+
+                        <span class="text-slate-500 text-sm">
+                            SmartSoft Technology
+                        </span>
+
+                    </div>
+
+                    <h3 class="text-2xl font-bold text-white mb-2">
+                        Software Developer Intern
+                    </h3>
+
+                    <p class="text-slate-400 leading-relaxed mb-6">
+                        Worked on ASP.NET applications, MSSQL databases,
+                        Crystal Reports and responsive user interfaces.
+                    </p>
+
+                    <div class="flex flex-wrap gap-2">
+
+                        <span class="tag-chip">ASP.NET</span>
+                        <span class="tag-chip">Web Forms</span>
+                        <span class="tag-chip">MSSQL</span>
+                        <span class="tag-chip">Bootstrap</span>
+                        <span class="tag-chip">Crystal Reports</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+ 
+  <!-- TECH STACK -->
+  <section class="py-24 px-6" style="background: rgba(13,20,36,0.8);">
+    <div class="max-w-6xl mx-auto">
+      <div class="reveal">
+        <div class="text-xs font-semibold uppercase tracking-[3px] text-emerald-400 mb-3">Technologies</div>
+        <h2 class="font-display text-4xl font-bold tracking-tight mb-4">Tech <span class="grad-text">Stack</span></h2>
+        <p class="text-slate-400 text-[15px] max-w-lg mb-14">Core technologies and tools I use for building scalable enterprise systems.</p>
+      </div>
+ 
+      <div class="reveal flex flex-wrap gap-3">
+        <span class="tag-chip text-xs">⚙️ C#</span>
+        <span class="tag-chip text-xs">⚡ ASP.NET Core</span>
+        <span class="tag-chip text-xs">🔗 REST / Minimal API</span>
+        <span class="tag-chip text-xs">🏛️ Clean Architecture</span>
+        <span class="tag-chip text-xs">📦 Repository Pattern</span>
+        <span class="tag-chip text-xs">🔁 Unit of Work</span>
+        <span class="tag-chip text-xs">🔌 Dependency Injection</span>
+        <span class="tag-chip text-xs">🛢 MSSQL / PostgreSQL</span>
+        <span class="tag-chip text-xs">🚀 EF Core</span>
+        <span class="tag-chip text-xs">⚙️ Dapper</span>
+        <span class="tag-chip text-xs">🅰️ Angular</span>
+        <span class="tag-chip text-xs">🔁 JavaScript / jQuery</span>
+        <span class="tag-chip text-xs">⚡ TypeScript</span>
+        <span class="tag-chip text-xs">🎨 Bootstrap</span>
+        <span class="tag-chip text-xs">🔐 JWT Authentication</span>
+        <span class="tag-chip text-xs">📡 SignalR</span>
+        <span class="tag-chip text-xs">✅ FluentValidation</span>
+        <span class="tag-chip text-xs">📊 RDLC Report</span>
+        <span class="tag-chip text-xs">📊 Crystal Reports</span>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- PROJECTS -->
+  <section id="projects" class="py-24 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="reveal">
+        <div class="text-xs font-semibold uppercase tracking-[3px] text-emerald-400 mb-3">Portfolio</div>
+        <h2 class="font-display text-4xl font-bold tracking-tight mb-4">My <span class="grad-text">Projects</span></h2>
+        <p class="text-slate-400 text-[15px] max-w-lg mb-14">A selection of things I've built — from APIs to full-stack enterprise applications.</p>
+      </div>
+ 
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+ 
+        <!-- 1. Real Estate -->
+        <div class="reveal project-card">
+          <div class="flex justify-between items-start mb-5">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center text-xl" style="background: rgba(16,185,129,0.12);">🏢</div>
+            <div class="flex gap-3">
+              <a href="#" class="text-slate-500 hover:text-emerald-400 transition-colors text-lg">⇗</a>
+              <a href="#" class="text-slate-500 hover:text-emerald-400 transition-colors text-lg">🔗</a>
+            </div>
+          </div>
+          <h3 class="font-display font-bold text-base mb-3">Real Estate & Hotel ERP Management System</h3>
+          <ul class="space-y-2 mb-5 flex-1">
+            <li class="flex gap-2 text-sm text-slate-400 leading-relaxed"><span class="text-emerald-500 flex-shrink-0 mt-1">▸</span>Designed a modular ERP for Real Estate and Hotel management within a unified platform.</li>
+            <li class="flex gap-2 text-sm text-slate-400 leading-relaxed"><span class="text-emerald-500 flex-shrink-0 mt-1">▸</span>Implemented business workflows: land purchase, plot sales, installment processing, deed generation.</li>
+            <li class="flex gap-2 text-sm text-slate-400 leading-relaxed"><span class="text-emerald-500 flex-shrink-0 mt-1">▸</span>Integrated financial workflows with automated money receipt generation and advanced reporting.</li>
+          </ul>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="tag-chip">C#</span><span class="tag-chip">ASP.NET MVC</span><span class="tag-chip">Clean Architecture</span><span class="tag-chip">MSSQL</span><span class="tag-chip">SignalR</span><span class="tag-chip">Crystal Report</span>
+          </div>
+          <div class="flex flex-wrap gap-2 mb-3">
+            <a href="#" class="text-xs px-3 py-1.5 rounded-md border border-white/10 text-slate-500 hover:text-emerald-400 hover:border-emerald-500/40 transition-all">Bhaiya Housing Ltd.</a>
+            <a href="#" class="text-xs px-3 py-1.5 rounded-md border border-white/10 text-slate-500 hover:text-emerald-400 hover:border-emerald-500/40 transition-all">Probashi Palli Ltd.</a>
+            <a href="#" class="text-xs px-3 py-1.5 rounded-md border border-white/10 text-slate-500 hover:text-emerald-400 hover:border-emerald-500/40 transition-all">Biswas Builders Ltd.</a>
+          </div>
+          <a href="#" class="inline-block text-xs px-3 py-1.5 rounded-md border border-white/10 text-slate-500 hover:text-emerald-400 hover:border-emerald-500/40 transition-all">View Project</a>
+        </div>
+ 
+        <!-- 2. Broker Dashboard -->
+        <div class="reveal project-card" style="transition-delay:0.05s">
+          <div class="flex justify-between items-start mb-5">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center text-xl" style="background: rgba(16,185,129,0.12);">📈</div>
+            <div class="flex gap-3">
+              <a href="https://www.eblsecurities.com/" target="_blank" class="text-slate-500 hover:text-emerald-400 transition-colors text-lg">⇗</a>
+              <a href="https://www.eblsecurities.com/" target="_blank" class="text-slate-500 hover:text-emerald-400 transition-colors text-lg">🔗</a>
+            </div>
+          </div>
+          <h3 class="font-display font-bold text-base mb-3">Broker House Client Dashboard</h3>
+          <ul class="space-y-2 mb-5 flex-1">
+            <li class="flex gap-2 text-sm text-slate-400 leading-relaxed"><span class="text-emerald-500 flex-shrink-0 mt-1">▸</span>Dynamic admin dashboard with full content control and real-time updates using SignalR.</li>
+            <li class="flex gap-2 text-sm text-slate-400 leading-relaxed"><span class="text-emerald-500 flex-shrink-0 mt-1">▸</span>Optimized SQL queries, stored procedures, triggers, and transaction handling for performance.</li>
+            <li class="flex gap-2 text-sm text-slate-400 leading-relaxed"><span class="text-emerald-500 flex-shrink-0 mt-1">▸</span>Integrated AJAX-based loading with automated SMS and email notification system.</li>
+          </ul>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="tag-chip">C#</span><span class="tag-chip">ASP.NET Core MVC</span><span class="tag-chip">Dapper</span><span class="tag-chip">MSSQL</span><span class="tag-chip">SignalR</span><span class="tag-chip">RDLC Report</span>
+          </div>
+          <div class="flex flex-wrap gap-2 mb-3">
+            <a href="https://www.eblsecurities.com/" target="_blank" class="text-xs px-3 py-1.5 rounded-md border border-white/10 text-slate-500 hover:text-emerald-400 hover:border-emerald-500/40 transition-all">eblsecurities.com</a>
+            <a href="https://sarsecltd.com/" target="_blank" class="text-xs px-3 py-1.5 rounded-md border border-white/10 text-slate-500 hover:text-emerald-400 hover:border-emerald-500/40 transition-all">sarsecltd.com</a>
+          </div>
+          <a href="#" class="inline-block text-xs px-3 py-1.5 rounded-md border border-white/10 text-slate-500 hover:text-emerald-400 hover:border-emerald-500/40 transition-all">View Project</a>
+        </div>
+ 
+        <!-- 3. Expense Tracker -->
+        <div class="reveal project-card" style="transition-delay:0.1s">
+          <div class="flex justify-between items-start mb-5">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center text-xl" style="background: rgba(16,185,129,0.12);">📦</div>
+            <div class="flex gap-3">
+              <a href="https://github.com/joydash1/expense-tracker-clean-architecture-api" target="_blank" class="text-slate-500 hover:text-emerald-400 transition-colors text-lg">⇗</a>
+            </div>
+          </div>
+          <h3 class="font-display font-bold text-base mb-3">Expense Tracker REST API</h3>
+          <ul class="space-y-2 mb-5 flex-1">
+            <li class="flex gap-2 text-sm text-slate-400 leading-relaxed"><span class="text-emerald-500 flex-shrink-0 mt-1">▸</span>Built scalable REST API using Clean Architecture, SOLID principles, and modular design patterns.</li>
+            <li class="flex gap-2 text-sm text-slate-400 leading-relaxed"><span class="text-emerald-500 flex-shrink-0 mt-1">▸</span>Implemented JWT-based authentication and role-based authorization to secure API endpoints.</li>
+            <li class="flex gap-2 text-sm text-slate-400 leading-relaxed"><span class="text-emerald-500 flex-shrink-0 mt-1">▸</span>Applied FluentValidation for robust request validation and clean API handling.</li>
+          </ul>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="tag-chip">C#</span><span class="tag-chip">ASP.NET Core Web API</span><span class="tag-chip">JWT Auth</span><span class="tag-chip">EF Core</span><span class="tag-chip">SQL Server</span>
+          </div>
+          <a href="https://github.com/joydash1/expense-tracker-clean-architecture-api" target="_blank" class="inline-block text-xs px-3 py-1.5 rounded-md border border-white/10 text-slate-500 hover:text-emerald-400 hover:border-emerald-500/40 transition-all">View on GitHub</a>
+        </div>
+ 
+        <!-- 4. E-Commerce -->
+        <div class="reveal project-card" style="transition-delay:0.15s">
+          <div class="flex justify-between items-start mb-5">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center text-xl" style="background: rgba(16,185,129,0.12);">🛒</div>
+            <a href="https://github.com/joydash1/Product-Cart-API" target="_blank" class="text-slate-500 hover:text-emerald-400 transition-colors text-lg">⇗</a>
+          </div>
+          <h3 class="font-display font-bold text-base mb-3">E-Commerce Product Cart System</h3>
+          <ul class="space-y-2 mb-5 flex-1">
+            <li class="flex gap-2 text-sm text-slate-400 leading-relaxed"><span class="text-emerald-500 flex-shrink-0 mt-1">▸</span>Full-stack e-commerce using ASP.NET Core Razor Pages with RESTful APIs following a Figma UI template.</li>
+            <li class="flex gap-2 text-sm text-slate-400 leading-relaxed"><span class="text-emerald-500 flex-shrink-0 mt-1">▸</span>Product listing, cart management, search, and pagination with seamless backend integration.</li>
+            <li class="flex gap-2 text-sm text-slate-400 leading-relaxed"><span class="text-emerald-500 flex-shrink-0 mt-1">▸</span>Dynamic discount system with date-range promotions and automated pricing adjustments.</li>
+          </ul>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="tag-chip">C#</span><span class="tag-chip">ASP.NET Core 8</span><span class="tag-chip">Razor Pages</span><span class="tag-chip">REST API</span><span class="tag-chip">jQuery AJAX</span>
+          </div>
+          <a href="https://github.com/joydash1/Product-Cart-API" target="_blank" class="inline-block text-xs px-3 py-1.5 rounded-md border border-white/10 text-slate-500 hover:text-emerald-400 hover:border-emerald-500/40 transition-all">View on GitHub</a>
+        </div>
+ 
+        <!-- 5. Hospital -->
+        <div class="reveal project-card" style="transition-delay:0.2s">
+          <div class="flex justify-between items-start mb-5">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center text-xl" style="background: rgba(16,185,129,0.12);">🏥</div>
+            <a href="https://github.com/joydash1/hospital-management-clean-architecture-restapi" target="_blank" class="text-slate-500 hover:text-emerald-400 transition-colors text-lg">⇗</a>
+          </div>
+          <h3 class="font-display font-bold text-base mb-3">Hospital Management System API</h3>
+          <ul class="space-y-2 mb-5 flex-1">
+            <li class="flex gap-2 text-sm text-slate-400 leading-relaxed"><span class="text-emerald-500 flex-shrink-0 mt-1">▸</span>Scalable Hospital Management using ASP.NET Core Web API with Clean Architecture layers.</li>
+            <li class="flex gap-2 text-sm text-slate-400 leading-relaxed"><span class="text-emerald-500 flex-shrink-0 mt-1">▸</span>Real-time communication with SignalR for instant notifications and live appointment updates.</li>
+            <li class="flex gap-2 text-sm text-slate-400 leading-relaxed"><span class="text-emerald-500 flex-shrink-0 mt-1">▸</span>Conflict-safe appointment scheduling with EF Core + Dapper hybrid data access.</li>
+          </ul>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="tag-chip">C#</span><span class="tag-chip">ASP.NET Core</span><span class="tag-chip">SignalR</span><span class="tag-chip">EF Core</span><span class="tag-chip">Dapper</span><span class="tag-chip">FluentValidation</span>
+          </div>
+          <a href="https://github.com/joydash1/hospital-management-clean-architecture-restapi" target="_blank" class="inline-block text-xs px-3 py-1.5 rounded-md border border-white/10 text-slate-500 hover:text-emerald-400 hover:border-emerald-500/40 transition-all">View on GitHub</a>
+        </div>
+ 
+        <!-- 6. SMTP Mail Server -->
+        <div class="reveal project-card" style="transition-delay:0.25s">
+          <div class="flex justify-between items-start mb-5">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center text-xl" style="background: rgba(16,185,129,0.12);">📧</div>
+            <a href="https://github.com/joydash1/smtp-mailserver-minimal-api" target="_blank" class="text-slate-500 hover:text-emerald-400 transition-colors text-lg">⇗</a>
+          </div>
+          <h3 class="font-display font-bold text-base mb-3">SMTP Mail Server</h3>
+          <ul class="space-y-2 mb-5 flex-1">
+            <li class="flex gap-2 text-sm text-slate-400 leading-relaxed"><span class="text-emerald-500 flex-shrink-0 mt-1">▸</span>Scalable SMTP Mail Server using .NET Core Minimal API focused on performance and reliability.</li>
+            <li class="flex gap-2 text-sm text-slate-400 leading-relaxed"><span class="text-emerald-500 flex-shrink-0 mt-1">▸</span>Integrated with MailKit for seamless SMTP protocol support and enhanced security features.</li>
+            <li class="flex gap-2 text-sm text-slate-400 leading-relaxed"><span class="text-emerald-500 flex-shrink-0 mt-1">▸</span>Applied FluentValidation and DI for clean, maintainable, and testable architecture.</li>
+          </ul>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="tag-chip">C#</span><span class="tag-chip">.NET Core Minimal API</span><span class="tag-chip">SMTP</span><span class="tag-chip">MailKit</span><span class="tag-chip">FluentValidation</span>
+          </div>
+          <a href="https://github.com/joydash1/smtp-mailserver-minimal-api" target="_blank" class="inline-block text-xs px-3 py-1.5 rounded-md border border-white/10 text-slate-500 hover:text-emerald-400 hover:border-emerald-500/40 transition-all">View on GitHub</a>
+        </div>
+ 
+      </div>
+    </div>
+  </section>
+ 
+  <!-- CONTACT -->
+  <section id="contact" class="py-24 px-6" style="background: rgba(13,20,36,0.8);">
+    <div class="max-w-6xl mx-auto">
+      <div class="reveal text-center mb-14">
+        <div class="text-xs font-semibold uppercase tracking-[3px] text-emerald-400 mb-3">Get in touch</div>
+        <h2 class="font-display text-4xl font-bold tracking-tight mb-4">Have a <span class="grad-text">Project Idea?</span></h2>
+        <p class="text-slate-400 text-[15px] max-w-lg mx-auto">I'm currently available for freelance and full-time opportunities. Let's build something great.</p>
+      </div>
+ 
+      <div class="reveal glass rounded-3xl p-8 lg:p-16 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+ 
+        <!-- Info -->
+        <div>
+          <h3 class="font-display text-2xl font-bold mb-3">Let's Work Together</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-10">Whether it's a new project, a code review, or just a conversation about tech — my inbox is always open.</p>
+ 
+          <div class="space-y-5">
+            <div class="flex items-center gap-4">
+              <div class="w-11 h-11 rounded-xl flex items-center justify-center text-lg flex-shrink-0" style="background: rgba(16,185,129,0.12); border: 1px solid rgba(16,185,129,0.15);">✉</div>
+              <div>
+                <div class="text-xs text-slate-500 mb-0.5">Email</div>
+                <div class="text-sm font-medium">nirjhor268@gmail.com</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-4">
+              <div class="w-11 h-11 rounded-xl flex items-center justify-center text-lg flex-shrink-0" style="background: rgba(16,185,129,0.12); border: 1px solid rgba(16,185,129,0.15);">📞</div>
+              <div>
+                <div class="text-xs text-slate-500 mb-0.5">Phone</div>
+                <div class="text-sm font-medium">+880 198 435 5744</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-4">
+              <div class="w-11 h-11 rounded-xl flex items-center justify-center text-lg flex-shrink-0" style="background: rgba(16,185,129,0.12); border: 1px solid rgba(16,185,129,0.15);">📍</div>
+              <div>
+                <div class="text-xs text-slate-500 mb-0.5">Location</div>
+                <div class="text-sm font-medium">Dhaka, Bangladesh</div>
+              </div>
+            </div>
+          </div>
+        </div>
+ 
+        <!-- Form -->
+        <form onsubmit="return false;" class="space-y-5">
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-medium text-slate-400 mb-2">First Name</label>
+              <input class="form-input" type="text" placeholder="John" />
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-slate-400 mb-2">Last Name</label>
+              <input class="form-input" type="text" placeholder="Doe" />
+            </div>
+          </div>
+          <div>
+            <label class="block text-xs font-medium text-slate-400 mb-2">Email</label>
+            <input class="form-input" type="email" placeholder="john@example.com" />
+          </div>
+          <div>
+            <label class="block text-xs font-medium text-slate-400 mb-2">Message</label>
+            <textarea class="form-input" placeholder="Tell me about your project..."></textarea>
+          </div>
+          <div>
+            <label class="block text-xs font-medium text-slate-400 mb-2">Documents</label>
+            <input type="file" id="fileInput" class="hidden" multiple accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" onchange="handleFiles(this.files)" />
+            <label for="fileInput" class="flex flex-col items-center gap-2 py-8 px-6 rounded-xl cursor-pointer transition-all border-2 border-dashed border-white/10 hover:border-emerald-500/40 hover:bg-emerald-500/5 text-center">
+              <span class="text-3xl">📎</span>
+              <span class="text-sm font-medium text-slate-300">Click to upload or drag files here</span>
+              <span class="text-xs text-slate-500">PDF, DOC, JPG, PNG</span>
+            </label>
+            <div id="fileList" class="mt-3 space-y-2"></div>
+          </div>
+          <button type="submit" class="w-full py-3.5 rounded-full font-semibold text-sm transition-all hover:shadow-glow hover:scale-[1.02] active:scale-100" style="background: linear-gradient(135deg, #10b981, #22d3ee); color: #030712;">
+            Send Message →
+          </button>
+        </form>
+ 
+      </div>
+    </div>
+  </section>
+ 
+  <!-- FOOTER -->
+  <!-- <footer class="py-8 px-6 border-t border-white/5 text-center text-xs text-slate-600">
+    <p>© 2025 Joy Chandra Das · Built with passion in Dhaka, Bangladesh 🇧🇩</p>
+  </footer> -->
+ <!-- CTA + FOOTER -->
+<footer class="relative overflow-hidden border-t border-white/10 bg-dark-950">
+
+    <!-- Background Glow -->
+    <div class="absolute inset-0 pointer-events-none">
+
+        <div class="absolute left-1/2 top-32 -translate-x-1/2
+                    w-[700px] h-[700px] rounded-full opacity-20"
+             style="
+                background: radial-gradient(circle,
+                rgba(16,185,129,0.25) 0%,
+                rgba(34,211,238,0.15) 30%,
+                transparent 70%);
+                filter: blur(100px);
+             ">
+        </div>
+
+        <div class="absolute right-0 bottom-0 w-96 h-96 rounded-full opacity-10"
+             style="
+                background: radial-gradient(circle,
+                rgba(34,211,238,0.4) 0%,
+                transparent 70%);
+                filter: blur(80px);
+             ">
+        </div>
+
+    </div>
+
+    <!-- CTA SECTION -->
+    <div class="relative z-10 max-w-6xl mx-auto px-6 pt-24">
+
+        <div class="text-center mb-24">
+
+            <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-slate-300 mb-6">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                Available For Opportunities
+            </span>
+
+            <h2 class="font-display text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+                Let's Build Something
+                <span class="grad-text block">
+                    Amazing Together
+                </span>
+            </h2>
+
+            <p class="text-slate-400 text-lg max-w-2xl mx-auto mb-10">
+                Looking for a .NET Engineer to build scalable enterprise applications,
+                fintech systems, APIs, or business solutions?
+                Let's discuss your next project.
+            </p>
+
+            <div class="flex flex-wrap justify-center gap-4">
+
+                <a href="#contact"
+                   class="inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-dark-950 transition-all hover:scale-105 hover:shadow-glow"
+                   style="background:linear-gradient(135deg,#10b981,#22d3ee)">
+                    Get In Touch →
+                </a>
+
+                <a href="assets/documents/joyChandraDasResume.pdf"
+                   download
+                   target="_blank"
+                   class="inline-flex items-center gap-2 px-8 py-4 rounded-full glass text-slate-300 hover:text-emerald-400 transition-all">
+                    Download Resume
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- FOOTER CONTENT -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-16">
+
+            <!-- About -->
+            <div class="lg:col-span-2">
+
+                <h3 class="font-display text-2xl font-bold mb-5">
+                    <span class="grad-text">
+                        &lt;Joy Chandra Das/&gt;
+                    </span>
+                </h3>
+
+                <p class="text-slate-400 leading-relaxed max-w-md">
+                    Software Engineer specializing in .NET Core, C#, MSSQL,
+                    PostgreSQL, REST APIs, and enterprise software solutions.
+                    Passionate about building scalable systems that solve
+                    real-world business problems.
+                </p>
+
+                <!-- Social -->
+                <div class="flex gap-4 mt-8">
+
+                    <a href="https://www.linkedin.com/in/joychandradas11/"
+                       target="_blank"
+                       class="glass w-11 h-11 rounded-xl flex items-center justify-center hover:text-emerald-400 hover:-translate-y-1 transition-all">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+
+                    <a href="https://github.com/joydash1/"
+                       target="_blank"
+                       class="glass w-11 h-11 rounded-xl flex items-center justify-center hover:text-emerald-400 hover:-translate-y-1 transition-all">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+
+                    <a href="https://x.com/NJhor8440"
+                       target="_blank"
+                       class="glass w-11 h-11 rounded-xl flex items-center justify-center hover:text-emerald-400 hover:-translate-y-1 transition-all">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+
+                    <a href="mailto:nirjhor268@gmail.com"
+                       class="glass w-11 h-11 rounded-xl flex items-center justify-center hover:text-emerald-400 hover:-translate-y-1 transition-all">
+                        <i class="fa-regular fa-envelope"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+
+                <h4 class="font-semibold text-white mb-5">
+                    Quick Links
+                </h4>
+
+                <ul class="space-y-3 text-sm">
+
+                    <li><a href="#about" class="text-slate-400 hover:text-emerald-400 transition">About Me</a></li>
+                    <li><a href="#skills" class="text-slate-400 hover:text-emerald-400 transition">Skills</a></li>
+                    <li><a href="#experience" class="text-slate-400 hover:text-emerald-400 transition">Experience</a></li>
+                    <li><a href="#projects" class="text-slate-400 hover:text-emerald-400 transition">Projects</a></li>
+                    <li><a href="#contact" class="text-slate-400 hover:text-emerald-400 transition">Contact</a></li>
+
+                </ul>
+
+            </div>
+
+            <!-- Resources -->
+            <div>
+
+                <h4 class="font-semibold text-white mb-5">
+                    Resources
+                </h4>
+
+                <ul class="space-y-3 text-sm">
+
+                    <li>
+                        <a href="#"
+                           class="text-slate-400 hover:text-emerald-400 transition">
+                            🔒 Privacy Policy
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                           class="text-slate-400 hover:text-emerald-400 transition">
+                            📄 Terms of Service
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                           class="text-slate-400 hover:text-emerald-400 transition">
+                            🍪 Cookie Policy
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="assets/documents/joyChandraDasResume.pdf"
+                           download
+                           target="_blank"
+                           class="text-emerald-400 hover:text-emerald-300 transition">
+                            📥 Download Resume
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="border-t border-white/10 py-6">
+
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+
+                <p class="text-xs text-slate-500">
+                    © 2026 Joy Chandra Das. All Rights Reserved.
+                </p>
+
+                <p class="text-xs text-slate-500">
+                    Built with ❤️ using HTML, Tailwind CSS & JavaScript
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+  <script>
+    // Scroll reveal
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    revealEls.forEach(el => observer.observe(el));
+ 
+    // File upload
+    function handleFiles(files) {
+      const list = document.getElementById('fileList');
+      list.innerHTML = '';
+      Array.from(files).forEach(f => {
+        const size = (f.size / 1024).toFixed(1) + ' KB';
+        const item = document.createElement('div');
+        item.className = 'flex items-center justify-between px-4 py-2.5 rounded-xl text-sm';
+        item.style.cssText = 'background: rgba(16,185,129,0.07); border: 1px solid rgba(16,185,129,0.2);';
+        item.innerHTML = `
+          <div class="flex items-center gap-3 flex-1 min-w-0">
+            <span>📄</span>
+            <span class="truncate text-slate-300">${f.name}</span>
+            <span class="text-xs text-slate-500 flex-shrink-0">${size}</span>
+          </div>
+          <button onclick="this.closest('div').remove()" class="ml-3 w-6 h-6 rounded flex items-center justify-center text-red-400 hover:bg-red-400/20 transition-all text-xs flex-shrink-0">✕</button>
+        `;
+        list.appendChild(item);
+      });
+    }
+ 
+    // Smooth nav active state
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('nav a[href^="#"]');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(s => {
+        if (window.scrollY >= s.offsetTop - 100) current = s.id;
+      });
+      navLinks.forEach(a => {
+        a.style.color = a.getAttribute('href') === `#${current}` ? '#34d399' : '';
+      });
+    });
+  </script>
+</body>
+</html>
